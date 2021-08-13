@@ -3,8 +3,7 @@
 .footer-container 
   display: flex
   margin: 0 75px
-  padding-top: 77px
-  padding-bottom: 52px
+  padding: 77px 0 52px
 .footer-content
   width: 412px
   padding-left: 7px
@@ -17,24 +16,14 @@
 .social-icon-link
   display: block
 .footer-title
-  font-size: 25px
-  font-family: $font-family-roboto
-  font-weight: $bold
-  line-height: 33.33px
-  color: #fff
-  text-transform: uppercase
+  @include font($size: 25px, $font-family: $font-family-roboto, $weight: $bold, $line-height: 33.33px, $color: #fff, $text-transform: uppercase)
   margin-bottom: 7px
 .footer-desc
-  font-size: 18.75px
-  font-family: $font-family-roboto
-  font-weight: $regular
-  line-height: 29.17px
-  color: #fff
+  @include font($size: 18.75px, $font-family: $font-family-roboto, $weight: $regular, $line-height: 29.17px, $color: #fff)
   margin-bottom: 20px
 .links-container
-  display: flex
+  @include flex($wrap: wrap)
   width: 514px
-  flex-wrap: wrap
 .footer-link
   width: 96px
   padding: 0 9px
@@ -46,16 +35,10 @@
   li
     display: block
 .footer-menu-title
-  font-size: 20.83px
-  color: #fff
-  text-transform: uppercase
+  @include font($size: 20.83px, $color: #fff, $text-transform: uppercase)
   margin-bottom: 40px
 .footer-menu-link
-  color: #fff
-  font-size: 20.83px
-  line-height: 33.33px
-  font-weight: $regular
-  font-family: $font-family-roboto
+  @include font($size: 20.83px, $color: #fff, $line-height: 33.33px, $weight: $regular, $font-family: $font-family-roboto)
 @include mobile
   .footer-container
     display: block
@@ -67,8 +50,7 @@
     padding-left: .1rem
     padding-right: 0
   .footer-link:not(:last-child)
-    margin-right: .4rem
-    margin-bottom: .3rem
+    margin: 0 .3rem .4rem 0
   .links-container
     width: 100%
 

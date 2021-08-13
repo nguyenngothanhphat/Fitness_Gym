@@ -6,16 +6,10 @@
 .banner-text
   margin-bottom: 52px
 .banner-desc
-  font-size: 21.79px
-  font-weight: $regular
-  color: #fff
+  @include font($size: 21.79px, $weight: $regular, $color: #fff)
   margin-bottom: 99px
 .banner-button
-  font-size: 25px
-  font-family: $font-family-roboto
-  color: #3ea2d8
-  text-transform: uppercase
-  font-weight: $bold
+  @include font($size: 25px, $weight: $bold, $color: #3ea2d8, $font-family: $font-family-roboto, $text-transform: uppercase)
   padding: 15px 56px
   background: #fff
   border-radius: 30px
@@ -27,18 +21,12 @@
   background: #000000
   padding: 160px 0 156px
 .we-are-title
-  color: #00c0ff
-  font-size: 29.17px
-  font-weight: $extra-bold
-  text-transform: uppercase
+  @include font($size: 29.17px, $color: #00c0ff, $weight: $extra-bold, $text-transform: uppercase)
   margin-bottom: 33px
 .we-are-desc
-  color: #008dbb
+  @include font($size: 18.75px, $color: #008dbb, $weight: $regular, $line-height: 33.33px)
   width: 890px
   margin: 0 auto
-  font-size: 18.75px
-  font-weight: $regular
-  line-height: 33.33px
 .about-us
   background: #1b1b1b
 .about-wrapper
@@ -54,41 +42,26 @@
   li:nth-child(3)
     margin-right: 69px
 .about-title
-  color: #ffffff
-  font-size: 18.7px
-  font-weight: $bold
-  text-transform: uppercase
+  @include font($size: 18.7px, $weight: $bold, $color: #fff, $text-transform: uppercase)
   margin-bottom: 30px
 .about-desc
-  color: #c2c2c2
-  font-size: 16.62px
-  font-weight: $regular
-  line-height: 24.93px
+  @include font($size: 16.62px, $weight: $regular, $color: #c2c2c2, $line-height: 24.93px)
 .priority
   background: linear-gradient(rgba(46, 46, 46, 0.5), rgba(46, 46, 46, 0.5)), url(../../images/priority-background.png) no-repeat
   background-size: cover
   padding-top: 89px
 .priority-title
+  @include font($size: 29.17px, $color: #00c0ff, $weight: $bold, $text-transform: uppercase)
   text-align: center
-  color: #00c0ff
-  font-size: 29.17px
-  font-weight: $bold
-  text-transform: uppercase
-  // padding-top: 89px
   margin-bottom: 40px
 .priority-desc
-  color: #00c0ff
+  @include font($size: 20.83px, $color: #00c0ff, $weight: $medium, $line-height: 33.33px)
   width: 994px
   margin: 0 auto
   text-align: center
-  font-size: 20.83px
-  font-weight: $medium
-  line-height: 33.33px
   margin-bottom: 83px
 .priority-wrapper
-  display: flex
-  justify-content: center
-  flex-wrap: wrap
+  @include flex($justify: center, $wrap: wrap)
   padding-bottom: 94px
   li
     width: 367px
@@ -97,10 +70,7 @@
     opacity: 0.8
     color: #fff
     text-align: center
-    padding-top: 58px
-    padding-bottom: 73px
-    padding-left: 92px
-    padding-right: 97px
+    padding: 58px 97px 73px 92px
 .priority-wrapper
   li:nth-child(1)
     margin-left: 31px
@@ -110,57 +80,37 @@
   li:nth-child(4)
     margin-left: 31px
   li:nth-child(5)
-    margin: 0 32px
-    margin-bottom: 32px
+    margin: 0 32px 32px
 .priority-list-title
-  text-transform: uppercase
+  @include font($size: 16.7px, $text-transform: uppercase)
   margin-bottom: 52px
-  font-size: 16.7px
 .priority-list-desc
-  font-size: 16.7px
-  font-weight: $regular
-  font-family: $font-family-lora
+  @include font($size: 16.7px, $weight: $regular, $font-family: $font-family-lora)
   text-align: left
   margin-bottom: 57px
 .priority-list-name
-  text-transform: uppercase
-  font-size: 14.61px
-  font-weight: $bold
-  font-family: $font-family-roboto
+  @include font($size: 14.61px, $weight: $bold, $font-family: $font-family-roboto, $text-transform: uppercase)
 .priority-list-position
-  font-size: 14.61px
-  font-weight: $regular
-  font-family: $font-family-lora
+  @include font($size: 14.61px, $weight: $regular, $font-family: $font-family-lora)
 .services
   background: #000000
   text-align: center
 .services-title
-  font-size: 29.17px
-  color: #00c0ff
-  font-weight: $medium
-  text-transform: uppercase
-  padding-top: 98px
-  margin-bottom: 25px
+  @include font($size: 29.17px, $weight: $medium, $color: #00c0ff, $text-transform: uppercase)
+  padding: 98px 0 25px
 .services-desc
-  font-size: 18.75px
-  line-height: 33.33px
-  font-weight: $regular
-  color: #00c0ff
+  @include font($size: 18.75px, $weight: $regular, $color: #00c0ff, $line-height: 33.33px)
   padding: 0 276px
   margin-bottom: 85px
 .services-menu
-  display: flex
-  justify-content: center
+  @include flex($justify: center)
   margin-bottom: 83px
   li:not(:last-child)
     margin-right: 42px  
 .menu-link
-  font-size: 16.67px
-  font-weight: $medium
-  color: #00c0ff
+  @include font($size: 16.67px, $weight: $medium, $color: #00c0ff)
 .services-wrapper
-  display: flex
-  justify-content: space-between
+  @include flex($justify: space-between)
   padding-bottom: 127px
   li
     width: 292px
@@ -168,112 +118,67 @@
 .services-img
   margin-bottom: 40px
 .services-content-title
-  font-size: 25px
-  font-weight: $bold
-  color: #fff
-  text-transform: uppercase
+  @include font($size: 25px, $weight: $bold, $color: #fff, $text-transform: uppercase)
   margin-bottom: 47px
 .services-content-desc
-  font-size: 16.7px
-  font-weight: $regular
-  color: #c2c2c2
+  @include font($size: 16.7px, $weight: $regular, $color: #c2c2c2)
   margin-bottom: 60px
 .services-content-name
-  font-size: 14.61px
-  font-weight: $bold
-  color: #fff
-  text-transform: uppercase
+  @include font($size: 14.61px, $weight: $bold, $color: #fff, $text-transform: uppercase)
 .services-content-position
-  font-size: 14.61px
-  font-weight: $regular
-  color: #c2c2c2
+  @include font($size: 14.61px, $weight: $regular, $color: #c2c2c2)
 .message
   background: #1b1b1b
   text-align: center
-  padding-top: 119px
-  padding-bottom: 51px
+  padding: 119px 0 51px
 .message-content
-  color: #00c0ff
-  font-size: 20.83px
-  font-weight: $semi-bold
-  line-height: 33.33px
+  @include font($size: 20.83px, $color: #00c0ff, $weight: $semi-bold, $line-height: 33.33px)
   padding: 0 228px
   margin-bottom: 38px
 .message-author
-  color: #00c0ff
-  font-size: 18.75px
-  font-weight: $semi-bold
-  line-height: 33.33px
+  @include font($size: 18.75px, $color: #00c0ff, $weight: $semi-bold, $line-height: 33.33px)
   text-align: center
 .health-story
-  display: flex
+  @include flex($justify: center)
   padding-left: 96px
-  justify-content: center
   background: #000000
 .story-content
   width: 619px
-  padding-left: 65px
-  padding-right: 100px
-  padding-top: 186px
+  padding: 186px 100px 0 65px
 .health-story-img
   width: 100%
 .story-title
-  color: #00c0ff
-  font-size: 37.5px
-  font-weight: $regular
-  text-transform: uppercase
+  @include font($size: 37.5px, $color: #00c0ff, $weight: $regular, $text-transform: uppercase)
   margin-bottom: 7px
 .story-desc
-  font-size: 18.77px
-  font-weight: $regular
-  color: #00c0ff
-  line-height: 33.33px
+  @include font($size: 18.77px, $weight: $regular, $color: #00c0ff, $line-height: 33.33px)
 .ticket
   background: url(../../images/buy-ticket.png) center/cover no-repeat
 .ticket-title
-  font-size: 58.33px
-  font-weight: $bold
-  font-family: $font-family-roboto
-  color: #fff
-  text-transform: uppercase
+  @include font($size: 58.33px, $weight: $bold, $font-family: $font-family-roboto, $color: #fff, $text-transform: uppercase)
 .ticket-sub-title
-  font-size: 58.33px
-  font-weight: $bold
-  font-family: $font-family-roboto
-  color: #fff
-  text-transform: uppercase
-  margin-top: -19px
-  margin-bottom: 8px
+  @include font($size: 58.33px, $weight: $bold, $font-family: $font-family-roboto, $color: #fff, $text-transform: uppercase)
+  margin: -19px 0 8px
 .ticket-desc
-  font-size: 16.67px
-  font-family: $font-family-roboto
-  font-weight: $regular
-  color: #fff
+  @include font($size: 16.67px, $font-family: $font-family-roboto, $weight: $regular, $color: #fff)
   margin-bottom: 57px
 .ticket-content 
   text-align: right
   width: 280px
   margin-left: auto
-  padding-top: 198px
-  padding-bottom: 217px
+  padding: 198px 0 217px
 .buy-button
-  color: #3ac6f5
+  @include font($size: 20.83px, $color: #3ac6f5, $font-family: $font-family-roboto, $weight: $regular, $text-transform: uppercase)
   padding: 10px 53px
   background: #fff
-  font-size: 20.83px
-  font-family: $font-family-roboto
-  font-weight: $regular
-  text-transform: uppercase
   border-radius: 20px
 .event
   background: #000000
 .event-wrapper
-  display: flex
-  flex-direction: column
+  @include flex($direction: column)
   width: 1030px
   margin: 0 auto
-  padding-top: 205px
-  padding-bottom: 209px
+  padding: 205px 0 209px
   color: #00c0ff
   li
     display: flex
@@ -291,36 +196,27 @@
   text-align: center
 .event-img
   width: 514px
-  padding-left: 197px
-  padding-right: 196px
-  padding-top: 55px
+  padding: 55px 197px 0 196px
 .event-img-reverse
   width: 514px
   padding-left: 183px
   padding-top: 46px
 .event-caption
-  font-size: 16.67px
-  font-weight: $regular
+  @include font($size: 16.67px, $weight: $regular)
   margin-bottom: 11px
 .event-title
-  font-size: 20.83px
-  font-weight: $medium
-  text-transform: uppercase
+  @include font($size: 20.83px, $weight: $medium, $text-transform: uppercase)
   margin-bottom: 44px
 .event-desc
-  font-size: 16.67px
-  font-weight: $regular
+  @include font($size: 16.67px, $weight: $regular)
 .trip
   background: #1b1b1b
 .trip-wrapper
-  display: flex
-  justify-content: center
-  padding-top: 84px
-  padding-bottom: 81px
+  @include flex($justify: center)
+  padding: 84px 0 81px
   li
     width: 267px
-    padding-left: 25px
-    padding-right: 25px
+    padding: 0 25px
   li:not(:last-child)
     margin-right: 145px
   li:nth-child(1)
@@ -328,23 +224,15 @@
   li:nth-child(3)
     margin-right: 75px
 .trip-title
-  font-size: 20.83px
-  font-weight: $medium
-  color: #fff
+  @include font($size: 20.83px, $weight: $medium, $color: #fff)
 .trip-caption
-  font-size: 16.67px
-  font-weight: $medium
-  line-height: 33px
+  @include font($size: 16.67px, $weight: $medium, $line-height: 33px, $color: #fff)
   letter-spacing: 1px
-  color: #fff
 .message-second
   background: #000000
   padding: 103px 0
 .message-content-second
-  font-size: 20.83px
-  font-weight: $regular
-  line-height: 33.33px
-  color: #00c0ff
+  @include font($size: 20.83px, $weight: $regular, $line-height: 33.33px, $color: #00c0ff)
   text-align: center
   padding: 0 275px
   margin-bottom: 10px
@@ -360,8 +248,7 @@
   .we-are-desc
     width: 100%
   .about-wrapper
-    flex-direction: column
-    align-items: center
+    @include flex($direction: column, $align: center)
     margin-left: 0
     li
       width: 100%
@@ -379,14 +266,10 @@
   .priority-wrapper
     li
       width: 100%
-      padding-left: .4rem
-      padding-right: .4rem
-    li:nth-child(1)
-      margin: 0 0 32px
-    li:nth-child(2)
-      margin: 0 0 32px
-    li:nth-child(5)
-      margin: 0 0 32px
+      padding: .4rem
+    li:nth-child(1),
+    li:nth-child(2),
+    li:nth-child(5),
     li:nth-child(4)
       margin: 0 0 32px
   .services-menu
@@ -398,8 +281,7 @@
   .services-desc
     padding: 0
   .services-wrapper
-    flex-direction: column
-    align-items: center
+    @include flex($direction: column, $align: center)
     li:not(:last-child)
       margin-bottom: 30px
   .message-content
