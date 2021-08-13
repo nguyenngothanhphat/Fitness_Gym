@@ -1,0 +1,184 @@
+mixin link(href, name)
+  a(class!=attributes.class href=href)= name 
+mixin menu-item(href, name)
+  li.header-item
+    a(class="header-link", href=href)=name
+mixin about-list(title, content)
+  li 
+    h3.about-title= title 
+    p.about-desc= content 
+mixin priority-list(title, content, name, position)
+  li 
+    h3.priority-list-title= title 
+    p.priority-list-desc= content 
+    h4.priority-list-name= name 
+    p.priority-list-position= position 
+mixin services-menu(href, name)
+  li 
+    a(class='menu-link', href=href)= name
+mixin services-content(img, alt, title, desc, name, position)
+  li 
+    figure.services-img 
+      img(src=img, alt=alt)
+    h3.services-content-title= title
+    p.services-content-desc= desc
+    h4.services-content-name= name 
+    p.services-content-position= position
+html(lang="en")
+  head 
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Lora&display=swap")
+    link(rel="stylesheet", href="./styles/css/main.css")
+    title Fitness Gym
+  body
+    .container
+      header.header
+        .wrapper
+          .menu-wrapper
+            a(class='header-logo', href='#')
+              img(src="./images/logo.png", alt="fitness-gym-logo")
+            ul.header-menu
+              +menu-item('#', 'Home')
+              +menu-item('#', 'About')
+              +menu-item('#', 'Shop')
+              +menu-item('#', 'Contact')
+      section.banner  
+        .wrapper
+          .banner-info 
+            img(src="./images/sport-text.png", alt="sport")(class="banner-text")
+            p.banner-desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+            +link('#', 'Read More')(class='banner-button')
+      // Who are we
+      section.we-are
+        .wrapper
+          h3.we-are-title Who are we
+          p.we-are-desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+      // About us
+      section.about-us
+        .wrapper
+          ul.about-wrapper 
+            +about-list('We use less water', 'Lorem ipsum dolor sit amet, consecte sectetur adipisicing elit, tation omne  ullamco laboris nisi ut aliqolore.')
+            +about-list('We respect nature', 'Lorem ipsum dolor sit amet, consecte sectetur adipisicing elit, tation omne  ullamco laboris nisi ut aliqolore.')
+            +about-list('We believe in recycling', 'Lorem ipsum dolor sit amet, consecte sectetur adipisicing elit, tation omne  ullamco laboris nisi ut aliqolore.')
+      // Priority
+      section.priority
+        .wrapper
+          h3.priority-title Priorities go first
+          p.priority-desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+          ul.priority-wrapper 
+            +priority-list('Company', '“Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do”.', 'Adam Johns', 'account manager')
+            +priority-list('Company', '“Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do”.', 'Adam Johns', 'account manager')
+            +priority-list('Company', '“Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do”.', 'Adam Johns', 'account manager')
+            +priority-list('Company', '“Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do”.', 'Adam Johns', 'account manager')
+            +priority-list('Company', '“Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do”.', 'Adam Johns', 'account manager')
+            +priority-list('Company', '“Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do”.', 'Adam Johns', 'account manager')
+      // Services
+      section.services 
+        .wrapper 
+          h3.services-title What exactly do we do 
+          p.services-desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+          ul.services-menu 
+            +services-menu('#', 'Projects')
+            +services-menu('#', 'Travel')
+            +services-menu('#', 'Mission')
+            +services-menu('#', 'Photos')
+          ul.services-wrapper 
+            +services-content('./images/mobile-icon.png', 'mobile-icon', 'Sport', '“Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do”.', 'Adam Johns', 'Account manager')
+            +services-content('./images/gym-icon.png', 'gym-icon', 'Sport', '“Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do”.', 'Adam Johns', 'Account manager')
+            +services-content('./images/dumbbell-icon.gif', 'dumbbell-icon', 'Sport', '“Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do”.', 'Adam Johns', 'Account manager')
+      // Message
+      section.message 
+        .wrapper 
+          p.message-content Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+          h4.message-author David Johnson
+      // Health story
+      section.health-story
+        .story-content 
+          h3.story-title Nature is above all 
+          p.story-desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        figure.story-image 
+          img(src="./images/health-story.png", alt="health-story")(class="health-story-img")
+      // Buy ticket
+      section.ticket 
+        .wrapper 
+          .ticket-content 
+            h3.ticket-title Buy your
+            h3.ticket-sub-title tickets 
+            p.ticket-desc Lorem ipsum dolor sit amet, consec-tetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            +link('#', 'Here')(class='buy-button')
+      // Event gym
+      section.event 
+        .wrapper 
+          mixin event-gym(caption, title, desc, img, alt)
+            li 
+              .event-content 
+                h4.event-caption=caption 
+                h3.event-title=title 
+                p.event-desc=desc 
+              figure.event-img 
+                img(src= img, alt= alt)
+          mixin event-gym-reverse(caption, title, desc, img, alt)
+            li 
+              figure.event-img-reverse 
+                img(src= img, alt= alt)
+              .event-content-reverse
+                h4.event-caption=caption 
+                h3.event-title=title 
+                p.event-desc=desc      
+          ul.event-wrapper 
+            +event-gym('Projects / 20th August', 'Something new has just arrived', 'Lorem ipsum dolor sit amet, consectetur adip-isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim v architecto beatae vitae dicta sunt es. omne essentiale dolor liquam.', './images/body-icon.png', 'body-icon')
+            +event-gym-reverse('Projects / 20th August', 'Something new has just arrived', 'Lorem ipsum dolor sit amet, consectetur adip-isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim v architecto beatae vitae dicta sunt es. omne essentiale dolor liquam.', './images/calendar-icon.png', 'calendar-icon')
+            +event-gym('Projects / 20th August', 'Something new has just arrived', 'Lorem ipsum dolor sit amet, consectetur adip-isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim v architecto beatae vitae dicta sunt es. omne essentiale dolor liquam.', './images/no-food-icon.png', 'no-food-icon')
+      // Trip    
+      mixin trip-list(title, caption)
+        li 
+          h3.trip-title= title
+          p.trip-caption= caption
+      section.trip 
+        .wrapper 
+          ul.trip-wrapper 
+            +trip-list('Lorem ipsum dolor sit', 'Trips / 16th March, 2019')
+            +trip-list('Lorem ipsum dolor sit', 'Trips / 16th March, 2019')
+            +trip-list('Lorem ipsum dolor sit', 'Trips / 16th March, 2019')
+      // Message
+      section.message-second
+        .wrapper 
+          p.message-content-second Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          h4.message-author David Johnson
+      mixin menu-footer(link, name)
+        li 
+          +link(link, name)(class="footer-menu-link")
+      mixin icon-social(href, name, alt)
+        li 
+          a(class="social-icon-link" href=href target="_blank") 
+            img(src=name, alt=alt)
+      // Footer
+      footer.footer 
+        .wrapper 
+          .footer-container 
+            .footer-content
+              h3.footer-title About 
+              p.footer-desc Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididunt ultimam quantum
+              ul.social-icon 
+                +icon-social('https://facebook.com/', './images/facebook-icon_03.png', 'facebook-icon')
+                +icon-social('https://www.instagram.com/', './images/instagram-icon_05.png', 'instagram-icon')
+                +icon-social('https://twitter.com/', './images/twitter-icon_07.png', 'twitter-icon')
+                +icon-social('https://www.youtube.com/', './images/youtube-icon_09.png', 'youtube-icon')
+                +icon-social('https://www.snapchat.com/', './images/snapchat-icon.png', 'snapchat-icon')
+            .links-container 
+              -for(var i = 0; i < 3; i++)
+                .footer-link
+                  h3.footer-menu-title About
+                  ul.footer-menu-wrapper 
+                    +menu-footer('#', 'Team')
+                    +menu-footer('#', 'Join us')
+                    +menu-footer('#', 'Ethic')
+                    +menu-footer('#', 'Goals')
+            
+

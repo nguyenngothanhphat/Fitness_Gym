@@ -1,0 +1,28 @@
+.header
+  background: #040404
+  padding-top: 12px
+  padding-bottom: 10px
+  margin-top: 39px
+  position: fixed
+  right: 0
+  left: 0
+  z-index: 10
+.menu-wrapper
+  display: flex
+  justify-content: space-between
+  align-items: center
+.header-menu
+  display: flex
+  .header-item:not(:first-child)
+    margin-left: 84px
+.header-link
+  text-transform: uppercase
+  color: #00c0ff
+  font-size: 19.11px
+  font-weight: $medium
+@include mobile
+  .header
+    margin-top: 0
+    position: unset !important
+  .header-menu
+    display: none
