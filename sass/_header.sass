@@ -1,26 +1,35 @@
 .header
   background: #040404
-  padding-top: 12px
-  padding-bottom: 10px
-  margin-top: 39px
-  position: fixed
-  right: 0
+  position: absolute
   left: 0
-  z-index: 10
+  width: 100%
+  z-index: 15000
 .menu-wrapper
   @include flex($align: center, $justify: space-between)
 .header-menu
   display: flex
-  .header-item:not(:first-child)
-    margin-left: 84px
 .header-link
   text-transform: uppercase
   color: #00c0ff
-  font-size: 19.11px
   font-weight: $medium
+@include desktop
+  .header
+    padding-top: 12px
+    padding-bottom: 10px
+    top: 41px
+    min-width: 1300px
+  .menu-wrapper
+    padding-left: 35px
+  .header-item:not(:first-child)
+    margin-left: 84px
+  .header-link
+    font-size: 19.11px
 @include mobile
   .header
-    margin-top: 0
+    padding-top: .12rem
+    padding-bottom: .1rem
     position: unset !important
+  .menu-wrapper
+    padding-left: .1rem
   .header-menu
     display: none
