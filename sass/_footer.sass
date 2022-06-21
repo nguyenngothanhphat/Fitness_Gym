@@ -1,59 +1,148 @@
-.footer
-  background: #1b1b1b
-.footer-container 
+/** Footer **/
+.footer-top
+  background: #f3f5f8
+  text-align: center
+.footer-title
+  color: #353535
+  text-transform: uppercase
+  position: relative
+  &::after
+    content: ' '
+    background: url('../../images/under-title.png') center/contain no-repeat
+    position: absolute
+.footer-wrapper
   display: flex
-  margin: 0 75px
-  padding: 77px 0 52px
-.footer-content
-  width: 412px
-  padding-left: 7px
-  padding-right: 91px
-  margin-right: 138px
+  justify-content: space-around
+  flex-wrap: wrap
+  li
+    background: #fff
+.footer-item-title
+  color: #3dc9b3
+  text-transform: uppercase
+.footer-item-info
+  color: #8c9398
 .social-icon
   display: flex
-  li:not(:last-child)
-    margin-right: 13px
-.social-icon-link
-  display: block
-.footer-title
-  @include font($size: 25px, $font-family: $font-family-roboto, $weight: $bold, $line-height: 33.33px, $color: #fff, $text-transform: uppercase)
-  margin-bottom: 7px
-.footer-desc
-  @include font($size: 18.75px, $font-family: $font-family-roboto, $weight: $regular, $line-height: 29.17px, $color: #fff)
-  margin-bottom: 20px
-.links-container
-  @include flex($wrap: wrap)
-  width: 514px
-.footer-link
-  width: 96px
-  padding: 0 9px
-.footer-link:nth-child(1)
-  margin-right: 93px
-.footer-link:nth-child(2)
-  margin-right: 86px
-.footer-menu-wrapper
+  justify-content: center
   li
-    display: block
-.footer-menu-title
-  @include font($size: 20.83px, $color: #fff, $text-transform: uppercase)
-  margin-bottom: 40px
-.footer-menu-link
-  @include font($size: 20.83px, $color: #fff, $line-height: 33.33px, $weight: $regular, $font-family: $font-family-roboto)
+    background: #242830
+    width: 42px
+    height: 42px
+    border-radius: 50px
+.social-item-icon
+  padding: 14px 11px
+.social-link
+  display: block
+.footer-bottom
+  background: #242830
+.terms-copyright-wrapper
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+.terms-wrapper
+  display: flex
+  position: relative
+  li:first-child:after
+    content: ' '
+    position: absolute
+    background: #c5c6c8
+.terms-link
+  color: #888f96
+  line-height: 1.4
+  display: block
+.copyright, .copyright-link
+  line-height: 1.4
+.copyright
+  color: #fff
+.copyright-link
+  color: #888f96
+@include desktop
+  .terms-copyright-wrapper
+    padding: 0 15px
+  .footer-top
+    padding: 126px 0 111px
+  .footer-title
+    font-size: 15px
+    margin-bottom: 128px
+    letter-spacing: 2px
+    &::after
+      top: 37px
+      left: 50%
+      transform: translateX(-50%)
+      width: 562px
+      height: 20px
+  .footer-wrapper
+    margin-bottom: 105px
+    li
+      width: 360px
+      padding: 30px 65px 28px
+  .footer-item-icon
+    margin-bottom: 15px
+  .footer-item-title
+    font-size: 14px
+    margin-bottom: 20px
+    letter-spacing: 2px
+  .footer-item-info
+    font-size: 14px
+  .social-icon
+    gap: 0 20px
+  .footer-bottom
+    padding: 55px 0 50px
+  .terms-wrapper
+    gap: 0 22px
+    li:first-child:after
+      top: 2px
+      left: 147px
+      width: 2px
+      height: 14px
+  .terms-link
+    font-size: 14px
+  .copyright, .copyright-link
+    font-size: 14px
 @include mobile
-  .footer-container
-    display: block
-    margin: 0
-    padding-top: .3rem
-  .footer-content
-    width: 100%
-    margin-bottom: .3rem
-    padding-left: .1rem
-    padding-right: 0
-  .footer-link:not(:last-child)
-    margin: 0 .3rem .4rem 0
-  .links-container
-    width: 100%
+  .terms-copyright-wrapper
+    padding: 0 .15rem
+  .footer-top
+    padding: 1.2rem 0 .7rem
+  .footer-title
+    font-size: .28rem
+    margin-bottom: 1.22rem
+    letter-spacing: .02rem
+    &::after
+      top: .41rem
+      left: 50%
+      transform: translateX(-50%)
+      width: 5.62rem
+      height: .2rem
+  .footer-wrapper
+    margin-bottom: .98rem
+    gap: .2rem 0
+    li
+      width: 100%
+      padding: .3rem .65rem .28rem
+  .footer-item-icon
+    margin-bottom: .15rem
+  .footer-item-title
+    font-size: .24rem
+    margin-bottom: .2rem
+    letter-spacing: .02rem
+  .footer-item-info
+    font-size: .22rem
+  .social-icon
+    gap: 0 .2rem
+  .footer-bottom
+    padding: .55rem 0 .5rem
+  .terms-wrapper
+    gap: 0 .22rem
+    li:first-child:after
+      top: .06rem
+      left: 2.05rem
+      width: .02rem
+      height: .14rem
+  .terms-link
+    font-size: .2rem
+  .copyright, .copyright-link
+    font-size: .2rem
+
 
   
-
-    

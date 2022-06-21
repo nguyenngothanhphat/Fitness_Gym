@@ -1,35 +1,15 @@
 .header
-  background: #040404
   position: absolute
+  top: 0
   left: 0
   width: 100%
-  z-index: 15000
-.menu-wrapper
-  @include flex($align: center, $justify: space-between)
-.header-menu
-  display: flex
-.header-link
-  text-transform: uppercase
-  color: #00c0ff
-  font-weight: $medium
+  z-index: 9999
+.nav-menu
+  display: block
+  text-align: right
 @include desktop
-  .header
-    padding-top: 12px
-    padding-bottom: 10px
-    top: 41px
-    min-width: 1300px
-  .menu-wrapper
-    padding-left: 35px
-  .header-item:not(:first-child)
-    margin-left: 84px
-  .header-link
-    font-size: 19.11px
+  .nav-menu
+    padding: 64px 15px 64px 0
 @include mobile
-  .header
-    padding-top: .12rem
-    padding-bottom: .1rem
-    position: unset !important
-  .menu-wrapper
-    padding-left: .1rem
-  .header-menu
-    display: none
+  .nav-menu
+    padding: .64rem .15rem .64rem 0

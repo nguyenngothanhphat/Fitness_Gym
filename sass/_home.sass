@@ -1,531 +1,521 @@
-/** BANNER **/
+/** Banner **/
 .banner
-  background: linear-gradient(rgba(46, 46, 46, 0.5), rgba(46, 46, 46, 0.5)), url(../../images/banner.png) center/cover no-repeat
-.banner-info
+  background: url('../../images/banner-background.png') center/cover no-repeat
+.banner-content
   text-align: center
+.banner-title
+  font-weight: $book
+.banner-title-spec
+  color: #a1a9b0
 .banner-desc
-  @include font($weight: $regular, $color: #fff)
-.banner-button
-  @include font($weight: $bold, $color: #3ea2d8, $font-family: $font-family-roboto, $text-transform: uppercase)
-  background: #fff
+  color: #a6adb1
+  font-weight: $book
+.banner-btn
+  color: #fff
+  text-transform: uppercase
+  background: #3dc9b3
   display: inline-block
+  border-radius: 8px
+  border-bottom: 4px solid #309383
+  transition: all 0.5s linear
+  &:hover
+    background: #309383
 @include desktop
-  .banner-info
-    padding: 384px 232px 162px
-  .banner-text
-    margin-bottom: 54px
+  .banner-content
+    padding: 245px 15px 338px
+  .banner-title
+    font-size: 40px
+    margin-bottom: 21px
+    letter-spacing: 12px
   .banner-desc
-    font-size: 21.79px
-    margin-bottom: 99px
-  .banner-button
-    font-size: 25px
-    padding: 15px 56px
-    border-radius: 30px
-    width: 257px
-    height: 55px
-@include mobile
-  .banner-info
-    padding: 1.5rem 0
-  .banner-text
-    width: 100%
-    margin-bottom: .54rem
-  .banner-desc
-    font-size: .33rem
-    margin-bottom: .99rem
-  .banner-button
-    font-size: .3rem
-    padding: .15rem .56rem
-    border-radius: .3rem
-    width: 3rem
-    height: .64rem
-/** WE ARE  **/
-.we-are
-  text-align: center
-  background: #000000
-.we-are-title
-  @include font($color: #00c0ff, $weight: $extra-bold, $text-transform: uppercase)
-.we-are-desc
-  @include font($color: #008dbb, $weight: $regular, $line-height: 33.33px)
-  margin: 0 auto
-@include desktop
-  .we-are
-    padding: 160px 0 156px
-  .we-are-title
-    font-size: 29.17px
-    margin-bottom: 33px
-  .we-are-desc
-    font-size: 18.75px
-    width: 890px
-@include mobile
-  .we-are
-    padding: 1.6rem 0 1.56rem
-  .we-are-title
-    font-size: .44rem
-    margin-bottom: .33rem
-  .we-are-desc
-    font-size: .33rem
-    width: 100%
-/** ABOUT **/
-.about-us
-  background: #1b1b1b
-.about-wrapper
-  display: flex
-.about-title
-  @include font($weight: $bold, $color: #fff, $text-transform: uppercase)
-.about-desc
-  @include font($weight: $regular, $color: #c2c2c2, $line-height: 24.93px)
-@include desktop
-  .about-wrapper
-    padding: 132px 0 118px
-    li
-      width: 322px
-      padding: 0 16px
-    li:nth-child(1)
-    margin-left: 69px
-    li:nth-child(2)
-      margin: 0 73px
-    li:nth-child(3)
-      margin-right: 69px
-  .about-title
-    font-size: 18.7px
-    margin-bottom: 30px
-  .about-desc
-    font-size: 16.62px
-@include mobile
-  .about-wrapper
-    @include flex($direction: column, $align: center)
-    padding: 1.32rem 0 1.18rem
-    margin-left: 0
-    li
-      width: 100%
-      padding: 0 .16rem
-    li:nth-child(2)
-      margin: 0
-    li:nth-child(1)
-      margin-left: 0
-    li:nth-child(3)
-      margin-right: 0
-  .about-wrapper
-    li:not(:last-child)
-      margin-bottom: .3rem
-  .about-title
-    font-size: .4rem
-    margin-bottom: .3rem
-  .about-desc
-    font-size: .33rem
-/** PRIORITY **/
-.priority
-  background: linear-gradient(rgba(46, 46, 46, 0.5), rgba(46, 46, 46, 0.5)), url(../../images/priority-background.png) no-repeat
-  background-size: cover
-.priority-title
-  @include font($color: #00c0ff, $weight: $bold, $text-transform: uppercase)
-  text-align: center
-.priority-desc
-  @include font($color: #00c0ff, $weight: $medium, $line-height: 33.33px)
-  margin: 0 auto
-  text-align: center
-.priority-wrapper
-  @include flex($justify: center, $wrap: wrap)
-  li
-    background: #2b2b2b
-    opacity: 0.8
-    color: #fff
-    text-align: center
-.priority-list-title
-  @include font($text-transform: uppercase)
-.priority-list-desc
-  @include font($weight: $regular, $font-family: $font-family-lora)
-  text-align: left
-.priority-list-name
-  @include font($weight: $bold, $font-family: $font-family-roboto, $text-transform: uppercase)
-.priority-list-position
-  @include font($weight: $regular, $font-family: $font-family-lora)
-@include desktop
-  .priority
-    padding-top: 89px
-  .priority-title
-    font-size: 29.17px
-    margin-bottom: 40px
-  .priority-desc
-    font-size: 20.83px
-    width: 994px
-    margin-bottom: 83px
-  .priority-wrapper
-    padding-bottom: 94px
-    li
-      width: 367px
-      margin-bottom: 32px
-      padding: 58px 97px 73px 92px
-    li:nth-child(1)
-      margin-left: 31px
-    li:nth-child(2)
-      margin: 0 32px
-      margin-bottom: 32px
-    li:nth-child(4)
-      margin-left: 31px
-    li:nth-child(5)
-      margin: 0 32px 32px
-  .priority-list-title
-    font-size: 16.7px
-    margin-bottom: 52px
-  .priority-list-desc
-    font-size: 16.7px
-    margin-bottom: 57px
-  .priority-list-name, .priority-list-position
-    font-size: 14.61px
-@include mobile
-  .priority
-    padding-top: .89rem
-  .priority-title
-    font-size: .44rem
-    margin-bottom: .4rem
-  .priority-desc
-    font-size: .33rem
-    width: 100%
-    margin-bottom: .83rem
-  .priority-wrapper
-    padding-bottom: .94rem
-    li
-      width: 100%
-      margin-bottom: .32rem
-      padding: .58rem .97rem .73rem .92rem
-    li:nth-child(1),
-    li:nth-child(2),
-    li:nth-child(5),
-    li:nth-child(4)
-      margin: 0 0 .32rem
-  .priority-list-title
-    font-size: .39rem
-    margin-bottom: .52rem
-  .priority-list-desc
-    font-size: .33rem
-    margin-bottom: .57rem
-  .priority-list-name, .priority-list-position
-    font-size: .31rem
-/** Services **/
-.services
-  background: #000000
-  text-align: center
-.services-title
-  @include font($weight: $medium, $color: #00c0ff, $text-transform: uppercase)
-.services-desc
-  @include font($weight: $regular, $color: #00c0ff, $line-height: 33.33px)
-.menu-link
-  @include font($weight: $medium, $color: #00c0ff)
-.services-wrapper
-  @include flex($justify: space-between)
-.services-content-title
-  @include font($weight: $bold, $color: #fff, $text-transform: uppercase)
-.services-content-desc
-  @include font($weight: $regular, $color: #c2c2c2)
-.services-content-name
-  @include font($weight: $bold, $color: #fff, $text-transform: uppercase)
-.services-content-position
-  @include font($weight: $regular, $color: #c2c2c2)
-@include desktop
-  .services-title
-    font-size: 29.17px
-    padding: 98px 0 25px
-  .services-desc
-    font-size: 18.75px
-    padding: 0 276px
-    margin-bottom: 85px
-  .services-menu
-    @include flex($justify: center)
-    margin-bottom: 83px
-    li:not(:last-child)
-      margin-right: 42px  
-  .menu-link
-    font-size: 16.67px
-  .services-wrapper
-    padding-bottom: 127px
-    li
-      width: 292px
-      padding: 0 59px
-  .services-img
-    margin-bottom: 40px
-  .services-content-title
-    font-size: 25px
-    margin-bottom: 47px
-  .services-content-desc
-    font-size: 16.7px
-    margin-bottom: 60px
-  .services-content-name, .services-content-position
-    font-size: 14.61px
-@include mobile
-  .services-title
-    font-size: .44rem
-    padding: .98rem 0 .25rem
-  .services-desc
-    font-size: .33rem
-    padding: 0
-    margin-bottom: .85rem
-  .services-menu
-    @include flex($justify: space-around)
-    margin-bottom: .83rem
-    li
-      display: block
-    li:not(:last-child)
-      margin-right: .42rem  
-  .menu-link
-    font-size: .28rem
-  .services-wrapper
-    @include flex($direction: column, $align: center)
-    padding-bottom: 1.27rem
-    li
-      width: 100%
-      padding: 0 .59rem
-    li:not(:last-child)
-      margin-bottom: .3rem
-  .services-img
-    margin-bottom: .4rem
-  .services-content-title
-    font-size: .44rem
-    margin-bottom: .47rem
-  .services-content-desc
-    font-size: .33rem
-    margin-bottom: .6rem
-  .services-content-name, .services-content-position
-    font-size: .3rem
-/** Message **/
-.message
-  background: #1b1b1b
-  text-align: center
-.message-content
-  @include font($color: #00c0ff, $weight: $semi-bold, $line-height: 33.33px)
-.message-author
-  @include font($color: #00c0ff, $weight: $semi-bold, $line-height: 33.33px)
-  text-align: center
-@include desktop
-  .message
-    padding: 119px 0 51px
-  .message-content
-    font-size: 20.83px
-    padding: 0 228px
-    margin-bottom: 38px
-  .message-author
-    font-size: 18.75px
-@include mobile
-  .message
-    padding: 1.19rem 0 .51rem
-  .message-content
-    font-size: .325rem
-    padding: 0
-    margin-bottom: .38rem
-  .message-author
-    font-size: .295rem
-/** Health story **/
-.health-story
-  @include flex($justify: center)
-  background: #000000
-.health-story-img
-  width: 100%
-.story-title
-  @include font($color: #00c0ff, $weight: $regular, $text-transform: uppercase)
-.story-desc
-  @include font($weight: $regular, $color: #00c0ff, $line-height: 33.33px)
-@include desktop
-  .health-story
-    padding-left: 96px
-  .story-content
-    width: 619px
-    padding: 186px 100px 0 65px
-  .story-title
-    font-size: 37.5px
-    margin-bottom: 7px
-  .story-desc
-    font-size: 18.77px
-@include mobile
-  .health-story
-    padding-left: 0
-    flex-direction: column
-  .story-content
-    width: 100%
-    padding: .5rem
-  .story-title
-    font-size: .42rem
-    margin-bottom: .07rem
-  .story-desc
-    font-size: .27rem
-/** Ticket **/
-.ticket
-  background: url(../../images/buy-ticket.png) center/cover no-repeat
-.ticket-title
-  @include font($weight: $bold, $font-family: $font-family-roboto, $color: #fff, $text-transform: uppercase)
-.ticket-sub-title
-  @include font($weight: $bold, $font-family: $font-family-roboto, $color: #fff, $text-transform: uppercase)
-.ticket-desc
-  @include font($font-family: $font-family-roboto, $weight: $regular, $color: #fff)
-.ticket-content 
-  text-align: right
-  margin-left: auto
-.buy-button
-  @include font($color: #3ac6f5, $font-family: $font-family-roboto, $weight: $regular, $text-transform: uppercase)
-  background: #fff
-@include desktop
-  .ticket-title, .ticket-sub-title
-    font-size: 58.33px
-  .ticket-sub-title
-    margin: -19px 0 8px
-  .ticket-desc
-    font-size: 16.67px
-    margin-bottom: 57px
-  .ticket-content 
-    width: 280px
-    padding: 198px 0 217px
-  .buy-button
-    font-size: 20.83px
-    padding: 10px 53px
-    border-radius: 20px
-@include mobile
-  .ticket-title, .ticket-sub-title
-    font-size: .49rem
-  .ticket-sub-title
-    margin: -0.19rem 0 .08rem
-  .ticket-desc
-    font-size: .26rem
-    margin-bottom: .57rem
-  .ticket-content 
-    width: 2.8rem
-    padding: 1.98rem 0 2.17rem
-  .buy-button
-    font-size: .25rem
-    padding: .1rem .53rem
-    border-radius: .2rem
-/** Event **/
-.event
-  background: #000000
-.event-wrapper
-  @include flex($direction: column)
-  margin: 0 auto
-  color: #00c0ff
-  li
-    display: flex
-.event-content, .event-content-reverse
-  text-align: center
-.event-caption
-  @include font($weight: $regular)
-.event-title
-  @include font($weight: $medium, $text-transform: uppercase)
-.event-desc
-  @include font($weight: $regular)
-@include desktop
-  .event-wrapper
-    width: 1030px
-    padding: 205px 0 209px
-    li:not(:last-child)
-      margin-bottom: 224px
-  .event-content
-    width: 516px
-    padding-left: 28px
-    padding-right: 112px
-  .event-content-reverse
-    width: 514px
-    padding-left: 110px
-    padding-right: 19px
-  .event-img
-    width: 514px
-    padding: 55px 197px 0 196px
-  .event-img-reverse
-    width: 514px
-    padding-left: 183px
-    padding-top: 46px
-  .event-caption
-    font-size: 16.67px
-    margin-bottom: 11px
-  .event-title
-    font-size: 20.83px
-    margin-bottom: 44px
-  .event-desc
-    font-size: 16.67px
-@include mobile
-  .event-wrapper
-    width: 100%
-    padding: .5rem 0
-    li
-      flex-direction: column
-    li:not(:last-child)
-      margin-bottom: 2.24rem
-    li:nth-child(2)
-      flex-direction: column-reverse
-  .event-content, .event-content-reverse
-    width: 100%
-    padding-left: 0
-    padding-right: 0
-  .event-img, .event-img-reverse
-    width: 100%
-    padding: .5rem 
-    text-align: center
-  .event-caption
-    font-size: .27rem
-    margin-bottom: .11rem
-  .event-title
-    font-size: .4rem
-    margin-bottom: .44rem
-  .event-desc
-    font-size: .29rem
-/** Trip **/
-.trip
-  background: #1b1b1b
-.trip-title
-  @include font($weight: $medium, $color: #fff)
-.trip-caption
-  @include font($weight: $medium, $line-height: 33px, $color: #fff)
-@include desktop
-  .trip-wrapper
-    @include flex($justify: center)
-    padding: 83px 0 81px
-    li
-      width: 267px
-      padding: 0 25px
-    li:not(:last-child)
-      margin-right: 145px
-    li:nth-child(1)
-      margin-left: 75px
-    li:nth-child(3)
-      margin-right: 75px
-  .trip-title
-    font-size: 20.83px
-  .trip-caption
-    font-size: 16.67px
+    font-size: 15px
+    margin-bottom: 62px
+    letter-spacing: 2px
+  .banner-btn
+    font-size: 15px
+    padding: 22px 38px
+    width: 200px
+    border-radius: 5px
     letter-spacing: 1px
 @include mobile
-  .trip-wrapper
-    display: block
-    padding: .83rem 0 .81rem
+  .banner-content
+    padding: 2.4rem 0 3.42rem
+  .banner-title
+    font-size: .5rem
+    margin-bottom: .25rem
+    letter-spacing: .12rem
+  .banner-desc
+    font-size: .25rem
+    margin-bottom: .62rem
+    letter-spacing: .02rem
+  .banner-btn
+    font-size: .15rem
+    padding: .22rem .38rem
+    width: 2rem
+    border-radius: .05rem
+    letter-spacing: .01rem
+/** Intro **/
+.intro
+  background: #f3f5f8
+.intro-content
+  margin: 0 auto
+  text-align: center
+.intro-title
+  color: #353535
+  position: relative
+  &::after
+    content: ' '
+    background: url('../../images/under-title.png') center/contain  no-repeat
+    position: absolute
+.intro-desc
+  letter-spacing: 0.01
+  color: #bcc1c5
+  line-height: 2.14
+@include desktop
+  .intro
+    padding: 106px 0 120px
+  .intro-content
+    width: 780px
+  .intro-title
+    font-size: 15px
+    margin-bottom: 96px
+    letter-spacing: 2px
+    &::after
+      top: 38px
+      left: 50%
+      transform: translateX(-50%)
+      width: 562px
+      height: 20px
+  .intro-desc
+    font-size: 14px
+    margin: 0 15px
+@include mobile
+  .intro
+    padding: 1.06rem 0 1.2rem
+  .intro-content
+    width: 100%
+  .intro-title
+    font-size: .24rem
+    margin-bottom: .96rem
+    letter-spacing: .02rem
+    &::after
+      top: .38rem
+      left: 50%
+      transform: translateX(-50%)
+      width: 5.62rem
+      height: .2rem
+  .intro-desc
+    font-size: .2rem
+    margin: 0 .15rem
+/** Services-generic **/
+.generic-title
+  text-align: center
+  position: relative
+  &::after
+    content: ' '
+    background: url('../../images/under-title.png') center/contain  no-repeat
+    position: absolute
+.generic-wrapper
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+  li
+    text-align: center
+.generic-list-title
+  line-height: 1.3
+  position: relative
+  &::after
+    content: ' '
+    position: absolute
+    background: #3dc9b3
+    text-align: center
+.generic-list-desc
+  line-height: 1.4
+  color: #8c9398
+@include desktop
+  .services-generic
+    padding: 96px 0 123px
+  .generic-title
+    font-size: 15px
+    margin-bottom: 124px
+    letter-spacing: 2px
+    &::after
+      top: 41px
+      left: 50%
+      transform: translateX(-50%)
+      width: 562px
+      height: 20px
+  .generic-wrapper
+    li
+      width: 360px
+      padding: 0 8px
+  .generic-img
+    margin-bottom: 50px
+  .generic-list-title
+    font-size: 15px
+    margin-bottom: 50px
+    &::after
+      top: 42px
+      left: 50%
+      transform: translateX(-50%)
+      width: 33px
+      height: 3px
+  .generic-list-desc
+    font-size: 14px
+@include mobile
+  .services-generic
+    padding: .96rem 0 1.18rem
+  .generic-title
+    font-size: .23rem
+    margin-bottom: 1.24rem
+    letter-spacing: .02rem
+    &::after
+      top: .41rem
+      left: 50%
+      transform: translateX(-50%)
+      width: 5.62rem
+      height: .2rem
+  .generic-wrapper
+    gap: .2rem 0
     li
       width: 100%
-      padding: 0
-      text-align: center
-    li:not(:last-child)
-      margin-right: 0
-      margin-bottom: .3rem
-    li:nth-child(1)
-      margin-left: 0
-    li:nth-child(3)
-      margin-right: 0
-  .trip-title
-    font-size: .4rem
-  .trip-caption
-    font-size: .29rem
-    letter-spacing: .01rem
-/** Message bottom **/
-.message-second
-  background: #000000
-.message-content-second
-  @include font($weight: $regular, $line-height: 33.33px, $color: #00c0ff)
+      padding: 0 .08rem
+  .generic-img
+    margin-bottom: .5rem
+    img
+      width: 3.04rem
+  .generic-list-title
+    font-size: .22rem
+    margin-bottom: .5rem
+    &::after
+      top: .42rem
+      left: 50%
+      transform: translateX(-50%)
+      width: .33rem
+      height: .03rem
+  .generic-list-desc
+    font-size: .2rem
+/** Services iphone **/
+.service-content
+  position: relative
+  margin-left: auto
+  &::before
+    content: ' '
+    background: url('../../images/services-iphone.png') no-repeat
+    position: absolute
+.service-title
   text-align: center
+  color: #353535
+  font-weight: $medium
+  position: relative
+  &::after
+    content: ' '
+    background: url('../../images/under-title-small.png') center/contain  no-repeat
+    position: absolute
+.service-desc
+  line-height: 1.4
+  color: #8c9398
+.dots-group
+  display: flex
+.dots
+  border: 2px solid #c9cbca
+.dots:first-child
+  background: #212024
 @include desktop
-  .message-second
-    padding: 103px 0
-  .message-content-second
-    font-size: 20.83px
-    padding: 0 275px
-    margin-bottom: 10px
+  .dots-group
+    margin-left: 210px
+    gap: 0 8px
+  .dots
+    width: 16px
+    height: 16px
+    border-radius: 50px
+  .service-iphone
+    background: #f3f5f8
+  .service-content
+    background: #fff
+    width: calc(50% - 15px)
+    height: 700px
+    padding-left: 83px
+    padding-top: 131px
+    &::before
+      top: 0
+      right: 100%
+      width: 815px
+      height: 700px
+      z-index: 100
+  .service-title
+    font-size: 15px
+    letter-spacing: 2px
+    margin-bottom: 75px
+    &::after
+      top: 37px
+      left: 50%
+      transform: translateX(-50%)
+      width: 435px
+      height: 20px
+  .service-desc
+    font-size: 14px
+    margin-bottom: 129px
+    font-weight: $medium
+  .service-title, .service-desc
+    width: 487px
+    margin-left: 15px
+    margin-right: 15px
 @include mobile
-  .message-second
-    padding: 1.03rem 0
-  .message-content-second
-    font-size: .325rem
-    padding: 0
-    margin-bottom: .1rem
+  .dots-group
+    gap: 0 .08rem
+    justify-content: center
+  .dots
+    width: .16rem
+    height: .16rem
+    border-radius: .5rem
+  .service-iphone
+    background: transparent
+  .service-content
+    background: transparent
+    width: 100%
+    height: 7rem
+    padding-left: .83rem
+    padding-right: .83rem
+    padding-top: 1rem
+    &::before
+      top: 0
+      right: 0
+      width: 8.15rem
+      height: 7rem
+      z-index: -3
+  .service-title
+    font-size: .25rem
+    letter-spacing: .02rem
+    margin-bottom: .75rem
+    &::after
+      top: .41rem
+      left: 50%
+      transform: translateX(-50%)
+      width: 4.35rem
+      height: .2rem
+  .service-desc
+    font-size: .2rem
+    margin-bottom: 1.18rem
+  .service-title, .service-desc
+    width: unset !important
+    margin-left: unset !important
+    margin-right: unset !important
+/** Counter **/
+.counter
+  background: url('../../images/counter-background.png') center/cover no-repeat
+.counter-title
+  color: #fff
+  text-align: center
+  font-weight: $book
+.counter-sub
+  color: #fff
+  text-align: center
+  font-weight: $italic
+.dropdown-icon
+  background: #3dc9b3
+  display: block
+  margin: 0 auto
+.dropdown-icon
+    width: 46px
+    height: 46px
+    border-radius: 50px
+    .dropdown-image
+      padding: 18px 15px
+@include desktop
+  .counter
+    padding: 72px 0 51px
+  .counter-title
+    font-size: 40px
+    margin-bottom: 15px
+    letter-spacing: 10px
+  .counter-sub
+    font-size: 25px
+    margin-bottom: 36px
+    letter-spacing: 7px
+@include mobile
+  .counter
+    padding: .75rem 0 .51rem
+  .counter-title
+    font-size: .4rem
+    margin-bottom: .15rem
+    letter-spacing: .1rem
+  .counter-sub
+    font-size: .25rem
+    margin-bottom: .36rem
+    letter-spacing: .07rem
+/** Portfolio **/
+.portfolio-wrapper
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+  text-align: center
+.portfolio-image
+  width: 100%
+.portfolio-title
+  letter-spacing: 0.15
+  color: #353535
+  position: relative
+  &::after
+    content: ' '
+    position: absolute
+    background: #3dc9b3
+    text-align: center
+.portfolio-desc
+  line-height: 1.4
+  color: #8c9398
+  font-weight: $medium
+@include desktop
+  .portfolio
+    padding: 104px 0 96px
+  .portfolio-wrapper
+    li
+      width: 360px
+  .portfolio-img 
+    margin-bottom: 43px
+    position: relative
+  .portfolio-title
+    font-size: 15px
+    margin-bottom: 47px
+    &::after
+      top: 33px
+      left: 50%
+      transform: translateX(-50%)
+      width: 33px
+      height: 3px
+  .portfolio-desc
+    font-size: 14px
+  .overlay
+    background: transparent
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    opacity: 0
+    transition: 0.8s all
+    &:hover
+      background: #72d5c3
+      opacity: 0.9
+    img
+      padding-top: 72px
+      margin-bottom: 12px
+  .overlay-title
+    color: #fff
+    font-size: 15px
+    line-height: 1.3
+    text-transform: uppercase
+@include mobile
+  .portfolio
+    padding: 1.04rem 0 .96rem
+  .portfolio-wrapper
+    gap: .2rem 0
+    li
+      width: 100%
+  .portfolio-img 
+    margin-bottom: .43rem
+    position: relative
+  .portfolio-title
+    font-size: .25rem
+    margin-bottom: .47rem
+    &::after
+      top: .44rem
+      left: 50%
+      transform: translateX(-50%)
+      width: .33rem
+      height: .03rem
+  .portfolio-desc
+    font-size: .22rem
+  .overlay
+    background: transparent
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    opacity: 0
+    transition: 0.8s all
+    &:hover
+      background: #72d5c3
+      opacity: 0.9
+    img
+      padding-top: 1.3rem
+      margin-bottom: .12rem
+  .overlay-title
+    color: #fff
+    font-size: .15rem
+    line-height: 1.3
+    text-transform: uppercase
+/** Subcribe **/
+.subscribe
+  background: url('../../images/subcribe-background.png') center/cover no-repeat
+  text-align: center
+  position: relative
+.subcribe-title
+  color: #fff
+  font-weight: $medium
+.subscribe-input
+  outline: none
+  border: 1px solid #fff
+  background: transparent
+  color: #fff
+.subscribe-btn
+  background: #3dc9b3
+  text-transform: uppercase
+  letter-spacing: 0.15
+  display: inline-block
+  color: #fff
+  transition: all 0.5s linear
+  &:hover
+    background: #309383
+.dropdown-sub-icon
+  position: absolute
+  bottom: -24px
+  left: 50%
+  transform: translateX(-50%)
+  width: 46px
+  height: 46px
+  background: #3dc9b3
+  border-radius: 50px
+  display: block
+  opacity: 0.8
+  .dropdown-sub-image
+    padding: 18px 15px
+@include desktop
+  .subscribe
+    padding: 125px 0 154px
+  .subscibe-icon
+    margin-bottom: 18px
+  .subcribe-title
+    font-size: 15px
+    margin-bottom: 42px
+    letter-spacing: 2px
+  .subscribe-input
+    width: 353px
+    height: 67px
+    padding: 20px
+    margin-right: 5px
+  .subscribe-btn
+    font-size: 15px
+    padding: 24px 25px
+    width: 99px
+    height: 67px
+@include mobile
+  .subscribe
+    padding: 1.22rem 0 1.54rem
+  .subscibe-icon
+    margin-bottom: .22rem
+  .subcribe-title
+    font-size: .2rem
+    margin-bottom: .42rem
+    letter-spacing: .02rem
+  .subscribe-input
+    width: 65%
+    height: .67rem
+    padding: .2rem
+    margin-right: .05rem
+  .subscribe-btn
+    font-size: .15rem
+    padding: .26rem .25rem
+    width: .99rem
+    height: .67rem
